@@ -1,0 +1,207 @@
+#1. Жагсаалтад 'python', 'php', 'java' гэсэн утгуудыг хадгал. Жагсаалт дахь байрлалыг ашиглан эдгээр утга бүрийг хэвлэ.
+languages=['python', 'php', 'java']
+for i in languages:
+    print(i)
+    
+#2. 10 гишүүн бүхий тоон жагсаалт үүсгэ. Жагсаалтын нийлбэрийг давталт ашиглан хэвлэ.
+numbers=[1,2,4,7,8,9,10,15]
+k=0
+for i in numbers:
+    k=k+i
+print(k)
+
+#3. 5 гишүүн бүхий тоон жагсаалт үүсгэ. Жагсаалтын гишүүдийн үржвэрийг хэвлэх функц бич.Үр дүнг хэвлэ.
+def vrjwer(n):
+    m = 1
+    for i in n:
+        m = m * i
+    return m
+
+numbers=[1,2,4,7,9]
+print(vrjwer(numbers))
+
+#4. Өгөгдсөн тоон жагсаалтын 3 дахь элементийг сүүлийн сүүлийн элементтэй үржүүлэн үр дүнг буцаадаг функц бич.
+def vrjwer(n):
+    m=1
+    for i in n:
+        m=n[2]*n[-1]
+    return m
+
+numbers=[3,11,12,4,5,7,2]
+print(vrjwer(numbers))
+
+#5.Өгөгдсөн тоон жагсаалтаас хамгийн их болон хамгийн бага утгуудыг буцаах функц бич.Үр дүнг хэвлэ.
+def max(n):
+    x=max(n)
+    return x
+def min(n):
+    y=min(n)
+    return y
+
+numbers=[1,2,3,4,6,7,8,9,14]
+print(maxim(numbers),minum(numbers))
+
+#6.Өгөгдсөн жагсаалтаас хоёроос дээш оронтой, эхний болон төгсгөлийн тэмдэгтүүд нь хоорондоо адилхан гишүүн хэд байгааг тоолох функц бич.
+x=['abccba', 'abcdf', '123431']
+k=0
+for i in x:
+    if len(i)>2 and i[0]==i[-1]:
+        k=k+1
+print(k)
+
+#7.Өгөгдсөн жагсаалтаас давхардсан утгуудыг арилгаж, хэвлэ
+def davhardsan(a):
+    return list(dict.fromkeys(a))
+mylist = davhardsan(['cdfa', 'abcd', 2222, 2222, 'cdfa'])
+print(mylist) 
+
+#8.Жагсаалт хоосон эсэхийг шалгах функц бич. Үр дүнг хэвлэ.
+def empty(x):
+    if len(x):
+        print('Хоосон биш')
+    else:
+        print('Хоосон')
+x=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+empty(x)    
+
+#9. 10 гишүүн бүхий жагсаалтын 4, 6, 8 дахь гишүүдийг устгаж, хэвлэ.
+x=[1,2,3,4,5,6,7,8,9,10]
+del x[3:8:2]
+print(x)
+
+#10.Тоон гишүүн бүхий tuple үүсгэ.
+a=(1,3,5,7,9,11)
+
+
+#11.Tuple –д гишүүн нэмэх програм бич.
+a=(1,3,5,7,9,11)
+b=list(a)
+b.append(2)
+a=tuple(b)
+print(a)
+
+#12.Tuple –ийн 2 дахь элемент болон араасаа 2 дахь элементийг хэвлэ.
+a=(1,3,5,7,9,11)
+b=list(a)
+print(b[1],b[-2])
+
+
+#13.Tuple –д гараас оруулсан утга байгаа эсэхийг шалгах програм бич.
+given_tuple = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+char = input('Enter a character to find: ')
+for ch in given_tuple:
+    if ch == char:
+        print('It is in the tuple')
+        break
+    else:
+        print('It is not in the tuple')
+        break
+
+#14.Өгөгдсөн Tuple –ийн бүх гишүүдийг давталт ашиглан хэвлэ.
+given_tuple = ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+for ch in given_tuple:
+    print(ch)
+
+#15. 2 төрлийн set үүсгэн хооронд нь нэгтгэх програм бич.
+n={'a', 'b', 'c', 'd'}
+m={'e', 'f', 'g', 'h'}
+print(n.union(m))
+
+#16. 2 төрлийн set үүсгэн аль алинд байгаа утгыг олох програм бич.
+n={'a', 'b', 'c', 'd'}
+m={'e', 'a', 'c', 'h'}
+print(n.intersection(m))
+
+
+#17. Өгөгдсөн set-ийн уртыг ол.
+n={'a', 'b', 'c', 'd'}
+print(len(n))
+
+
+#18.Өгөгдсөн set-ээс гараас оруулсан утгыг устга.
+n={'a', 'b', 'c', 'e', 'f', 'g', 'h', 'd'}
+given=input()
+n.discard(given)
+print(n)
+
+
+#19. Өгөгдсөн set-ийн бүх утгыг устга.
+n={'a', 'b', 'c', 'e', 'f', 'g', 'h', 'd'}
+n.clear()
+print(n)
+
+
+#20. Өгөгдсөн set-ийг устга.
+n={'a', 'b', 'c', 'e', 'f', 'g', 'h', 'd'}
+del n
+
+
+#21.Key, value нь тоон утга бүхий dictionary үүсгэж өсөх болон буурахаар эрэмбэл.
+dict1={
+    '2':20,
+    '3':30,
+    '5':50,
+    '4':40,
+    '1':10}
+n = sorted(dict1.items(), key=lambda x: x[1])    
+print(n)
+
+
+#22.Өгөгдсөн key нь dictionary –д байгаа эсэхийг шалгах програм бич.
+dicti={
+    2:20,
+    3:30,
+    5:50,
+    4:40,
+    1:10}
+n=int(input())
+if n in dicti:
+    print(n,' dict-д байна.')
+else:
+    print('Байхгүй')
+
+#23. Өгөгдсөн value нь dictionary –д байгаа эсэхийг шалгах програм бич.
+dict3 = { 
+    '2':20,
+    '3':30,
+    '5':50,
+    '4':40,
+    '1':10 } 
+n=int(input())
+if n in dict3.values():
+    print("Байна")
+else:
+    print("Байхгүй")
+
+
+#24. For давталт ашиглан dictionary –ийн key, value –г хэвлэх програм бич.
+dictn = { '2':20,
+    '3':30,
+    '5':50,
+    '4':40,
+    '1':10 } 
+for i in dictn:
+    print(i,dictn[i])
+
+
+#25.Хоёр dictionary үүсгэж хооронд нь нэгтгэ.
+dictn= {
+    '4':40,
+    '1':10 } 
+dictm = {
+    'Model': '3', 
+    'Year': 2021 } 
+dictn.update(dictm)
+print(dictn)
+
+#26. Dictionary –д байгаа value хооронд нь нэмэх програм бич. 
+dicti = { '1':10,
+    '2':20,
+    '3':10,
+    '4':30,
+    '5':15,
+    '6':25} 
+sum = 0
+for i in dicti:
+    sum = sum + dicti[i]
+print("Нийлбэр:",sum)
